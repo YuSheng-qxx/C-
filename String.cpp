@@ -65,14 +65,14 @@ public:
 		{
 			//ÔöÈÝ
 			size_t newCapacity = _capacity == 0 ? 15 : 2 * _capacity;
-			reverse(newCapacity);
+			reserve(newCapacity);
 		}
 		//²åÈë
 		_ptr[_size++] = ch;
 		_ptr[_size] = '\0';
 	}
 
-	void reverse(size_t n)
+	void reserve(size_t n)
 	{
 		if (n > _capacity)
 		{
@@ -183,7 +183,7 @@ public:
 		if (_size == _capacity)
 		{
 			size_t newCapacity = _capacity == 0 ? 15 : 2 * _capacity;
-			reverse(newCapacity);
+			reserve(newCapacity);
 		}
 		size_t end = _size;
 		while (end > pos)
