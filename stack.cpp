@@ -1,41 +1,41 @@
-//#include<stack>
-//#include<vector>
-//using namespace std;
-//#include<iostream>
+#include<stack>
+#include<vector>
+using namespace std;
+#include<iostream>
 //
-//template <class T, class container>
-//class Stack
-//{
-//public:
-//	void push(const T& val)
-//	{
-//		_v.push_back(val);
-//	}
-//
-//	void pop()
-//	{
-//		_v.pop_back();
-//	}
-//
-//	T& top()
-//	{
-//		return _v.back();
-//	}
-//
-//	bool empty()
-//	{
-//		return _v.empty();
-//	}
-//
-//	size_t size()
-//	{
-//		return _v.size();
-//	}
-//
-//private:
-//	container _v;
-//};
-//
+template <class T, class container=deque<T>>
+class Stack
+{
+public:
+	void push(const T& val)
+	{
+		_v.push_back(val);
+	}
+
+	void pop()
+	{
+		_v.pop_back();
+	}
+
+	T& top()
+	{
+		return _v.back();
+	}
+
+	bool empty()
+	{
+		return _v.empty();
+	}
+
+	size_t size()
+	{
+		return _v.size();
+	}
+
+private:
+	container _v;
+};
+
 //void test()
 //{
 //	Stack<int> st;
@@ -106,11 +106,18 @@
 //	st.push(3);
 //	st.push(4);
 //	st.push(5);
-//
+//	cout << st.size() << endl;
 //	while (!st.empty())
 //	{
 //		cout << st.top() << " ";
 //		st.pop();
 //	}
 //	cout << endl;
+//}
+//
+//int main()
+//{
+//	test();
+//	system("pause");
+//	return 0;
 //}
