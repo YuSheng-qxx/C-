@@ -1,0 +1,16 @@
+class Solution {
+public:
+	void replaceSpace(char *str,int length) {
+        string str1,s=str;
+        for(char c:s)
+        {
+            if(c==' ')
+            {
+                str1+="%20";
+            }
+            else
+                str1+=c;
+        }
+        strcpy(str,str1.c_str());
+	}
+};
