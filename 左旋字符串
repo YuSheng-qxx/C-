@@ -1,0 +1,8 @@
+class Solution {
+public:
+    string LeftRotateString(string str, int n) {
+        str.append(str,0,n);
+        str.erase(0,n);
+        return str;
+    }
+};
